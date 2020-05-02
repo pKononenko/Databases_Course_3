@@ -31,12 +31,12 @@ ALTER TABLE gameplatformpublisher
                                                           publisher );
 
 CREATE TABLE gamesales (
-    region_sales     NUMBER(2, 5),
     game_name        VARCHAR2(100) NOT NULL,
     publisher        VARCHAR2(75) NOT NULL,
     platform         VARCHAR2(50) NOT NULL,
     region           VARCHAR2(5) NOT NULL,
-    year_of_release  INTEGER NOT NULL
+    year_of_release  INTEGER NOT NULL,
+    region_sales     NUMBER(2, 5)
 );
 
 ALTER TABLE gamesales
