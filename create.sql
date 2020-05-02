@@ -21,8 +21,8 @@ ALTER TABLE gamegenre ADD CONSTRAINT gamegenre_pk PRIMARY KEY ( game_name,
 
 CREATE TABLE gameplatformpublisher (
     game_name  VARCHAR2(100) NOT NULL,
-    publisher  VARCHAR2(75) NOT NULL,
-    platform   VARCHAR2(50) NOT NULL
+    platform   VARCHAR2(50) NOT NULL,
+    publisher  VARCHAR2(75) NOT NULL
 );
 
 ALTER TABLE gameplatformpublisher
@@ -32,8 +32,8 @@ ALTER TABLE gameplatformpublisher
 
 CREATE TABLE gamesales (
     game_name        VARCHAR2(100) NOT NULL,
-    publisher        VARCHAR2(75) NOT NULL,
     platform         VARCHAR2(50) NOT NULL,
+    publisher        VARCHAR2(75) NOT NULL,
     region           VARCHAR2(5) NOT NULL,
     year_of_release  INTEGER NOT NULL,
     region_sales     NUMBER(2, 5)
