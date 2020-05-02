@@ -36,7 +36,7 @@ CREATE TABLE gamesales (
     publisher        VARCHAR2(75) NOT NULL,
     region           VARCHAR2(5) NOT NULL,
     year_of_release  INTEGER NOT NULL,
-    region_sales     NUMBER(2, 5)
+    region_sales     DECIMAL(5, 2)
 );
 
 ALTER TABLE gamesales
