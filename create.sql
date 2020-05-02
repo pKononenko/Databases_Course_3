@@ -6,13 +6,13 @@
 
 
 CREATE TABLE game (
-    game_name VARCHAR2(100) NOT NULL
+    game_name VARCHAR2(150) NOT NULL
 );
 
 ALTER TABLE game ADD CONSTRAINT game_pk PRIMARY KEY ( game_name );
 
 CREATE TABLE gamegenre (
-    game_name  VARCHAR2(100) NOT NULL,
+    game_name  VARCHAR2(150) NOT NULL,
     genre      VARCHAR2(50) NOT NULL
 );
 
@@ -20,7 +20,7 @@ ALTER TABLE gamegenre ADD CONSTRAINT gamegenre_pk PRIMARY KEY ( game_name,
                                                                 genre );
 
 CREATE TABLE gameplatformpublisher (
-    game_name  VARCHAR2(100) NOT NULL,
+    game_name  VARCHAR2(150) NOT NULL,
     platform   VARCHAR2(50) NOT NULL,
     publisher  VARCHAR2(75) NOT NULL
 );
@@ -31,7 +31,7 @@ ALTER TABLE gameplatformpublisher
                                                           publisher );
 
 CREATE TABLE gamesales (
-    game_name        VARCHAR2(100) NOT NULL,
+    game_name        VARCHAR2(150) NOT NULL,
     platform         VARCHAR2(50) NOT NULL,
     publisher        VARCHAR2(75) NOT NULL,
     region           VARCHAR2(5) NOT NULL,
