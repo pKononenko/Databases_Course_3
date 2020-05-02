@@ -56,7 +56,7 @@ ORDER BY PERCENTAGE DESC;
 
 SElECT 
     year_of_release,
-    count(game_name)/4 AS GAMES_COUNT
+    COUNT(game_name)/COUNT(DISTINCT region) AS GAMES_COUNT
 FROM GAMEDATA
 GROUP BY year_of_release
 ORDER BY year_of_release;
