@@ -4,14 +4,19 @@ CREATE OR REPLACE VIEW GAMEDATA AS
     SELECT
         GAMEGENRE.GAME_NAME,
         GAMEGENRE.GENRE,
-        GAMESALES.PLATFORM,
-        GAMESALES.PUBLISHER,
-        GAMESALES.YEAR_OF_RELEASE,
+        GAMEYEAR.PLATFORM,
+        GAMEYEAR.PUBLISHER,
+        GAMEYEAR.YEAR_OF_RELEASE,
         GAMESALES.REGION,
         GAMESALES.REGION_SALES
     FROM
         GAMEGENRE
     JOIN
+        GAMEYEAR
+        ON GAMEYEAR.game_name = GAMEGENRE.game_name
+    JOIN
         GAMESALES
-    ON GAMESALES.game_name = GAMEGENRE.game_name;
+        ON GAMESALES.game_name = GAMEYEAR.game_name
+        AND GAMESALES.platform = GAMEYEAR.platform
+        AND GAMESALES.publisher = GAMEYEAR.publisher;
     
