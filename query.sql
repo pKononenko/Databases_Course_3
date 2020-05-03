@@ -24,7 +24,7 @@ ORDER BY PERCENTAGE DESC;
 
 SElECT 
     year_of_release,
-    count(game_name)/4 AS GAMES_COUNT
+    count(game_name) AS GAMES_COUNT
 FROM GAMEYEAR
 GROUP BY year_of_release
 ORDER BY year_of_release;
