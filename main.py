@@ -15,7 +15,8 @@ def fileId_from_url(url):
 
 
 # Підключення до chart-studio аккаунту
-chart_studio.tools.set_credentials_file(username='pavlo.kononenko', api_key='M14tsZTVr7Kx5S3e4kvl')
+# api key прибрано в цілях безпеки
+chart_studio.tools.set_credentials_file(username='pavlo.kononenko', api_key='')
 
 username = "PASHADB_KPI"
 password = "17897AAS"
