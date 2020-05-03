@@ -1,8 +1,9 @@
 import cx_Oracle
 import csv
 
+# Пароль password прибрано в цілях безпеки
 username = "PASHADB_KPI"
-password = "17897AAS"
+password = ""
 database = "localhost/xe"
 
 
