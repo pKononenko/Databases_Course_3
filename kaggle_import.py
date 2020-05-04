@@ -15,6 +15,17 @@ cursor = connection.cursor()
 # csv файл
 filename = 'Video_Game_Sales_as_of_Jan_2017.csv'
 
+# Очищуємо дані з таблиць (за умови, що скрипт create.sql вже виконано)
+# додаткове виправлення 04.05.20
+table_names = ["GAMEGENRE", "GAMESALES", "GAMEYEAR", "GAMEPLATFORMPUBLISHER",
+              "GAME", "GENRE", "REGION", "PLATFORM", "PUBLISHER"]
+delete_query_template = "DELETE FROM {}"
+
+for table in table_names:
+    print(table)
+    cursor.execute(delete_query_template.format(table))
+
+# Відкриваємо csv
 with open(filename) as f:
     csv_reader = csv.DictReader(f)
 
